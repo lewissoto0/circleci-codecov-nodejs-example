@@ -1,0 +1,31 @@
+{
+  "name": "circleci-codecov-nodejs-example",
+  "version": "1.0.0",
+  "description": "Example of automated testing using CircleCI and Codecov",
+  "main": "index.js",
+  "scripts": {
+    "ci": "nyc npm test && nyc report --reporter=text-lcov > coverage.lcov && ./node_modules/.bin/codecov",
+    "test": "mocha test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neverendingqs/circleci-codecov-nodejs-example.git"
+  },
+  "keywords": [
+    "circleci",
+    "codecov",
+    "node.js"
+  ],
+  "author": "neverendingqs",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neverendingqs/circleci-codecov-nodejs-example/issues"
+  },
+  "homepage": "https://github.com/neverendingqs/circleci-codecov-nodejs-example#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "codecov": "^3.1.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.1.0"
+  }
+}
